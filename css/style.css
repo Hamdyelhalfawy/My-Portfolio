@@ -1,0 +1,284 @@
+/* reset page style  */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* start navbar style */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 5px;
+    background-color: #222;
+    color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    font-weight: 600;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.nav-links a:hover{
+    color: #ff4d05;
+}
+
+/* end navbar style */
+
+/* start home style */
+.Home  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin: 20px 0px;
+}
+
+.Home span {
+    color: #df5c28;
+    font-size: 2rem;
+    transition: 1s;
+}
+
+.Home span:hover {
+    cursor: pointer;
+    font-size: 2.2rem;
+    color: #ff4d05;
+}
+
+.Home button {
+    border: 1px solid;
+    padding: 8px;
+    border-radius: 50px;
+    margin: 15px 1px 0px;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    transition: 1s;
+}
+
+.Home button:hover {
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+    background-color: green;
+    color: white;
+}
+
+.Home div img {
+    border-radius: 800px;
+    border: 2px solid black;
+}
+
+/* end home style */
+
+/* start about style */
+.About {
+    text-align: center;
+    padding: 15px;
+    width: 90%;
+    margin: 0px auto;
+}
+
+.About h2 {
+    margin-bottom: 15px;
+}
+
+.skills {
+    text-align: center;
+    align-items: center;
+}
+
+.skills h3 {
+    margin: 15px auto;
+}
+
+.skills ul {
+    display: inline-block;
+    text-align: left;
+    padding: 0px;
+    font-weight: bold;
+}
+
+/* End about style */
+
+/* start my project style */
+.Projects {
+    margin: 15px 0px 20px;
+}
+
+.Projects h2 {
+    width: 200px;
+    text-align: center;
+    margin: 11px auto 20px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.project-card img {
+    border-radius: 30px;
+    width:350px;
+    height: auto;
+    object-fit: cover;
+    transition: 1.12s;
+}
+
+.project-card img:hover {
+    cursor: pointer;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.project-card h3 {
+    width: 150px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    margin: 15px auto;
+    transition: 1.5s;
+    background-color: blueviolet;
+    border-radius: 50px;
+}
+
+.project-card h3:hover {
+    cursor: pointer;
+    color: white;
+    border-top-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+}
+
+.project-card p {
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* end my project style */
+
+/* start contact me style */
+.Contact-Me {
+    padding: 50px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 2.5rem;
+}
+
+.fa-instagram {
+    color: crimson;
+}
+
+.fa-whatsapp {
+    color: darkgreen;
+}
+
+.fa-brands:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    /* transform: translateY(-5px); */
+    transition: 0.6s;
+}
+
+/* end contact me style */
+
+/* start footer style */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-top:2px solid #df5c28;
+    font-weight: 600;
+}
+
+footer span {
+    color: #df5c28;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+/* end footer style */
+
+/* start media query */
+/* الحل النهائي لمشاكل الموبايل */
+@media (max-width: 768px) {
+    /* 1. ضبط الصفحة لمنع السكرول العرضي */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* 2. ضبط الهوم */
+    .Home {
+        flex-direction: column; /* العناصر تحت بعض */
+        gap: 20px; /* تقليل المسافة */
+        text-align: center;
+    }
+
+    .Home div img {
+        width: 200px; /* تصغير حجم صورتك في الموبايل */
+        height: 200px;
+    }
+
+    /* 3. ضبط الناف بار */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        padding: 0;
+    }
+
+    /* 4. أهم تعديل: كروت المشاريع */
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .project-card img {
+        width: 100%; /* الصورة تاخد عرض الشاشة المتاح بس */
+        max-width: 300px; /* متزيدش عن 300 بكسل عشان متلمسش الحواف */
+    }
+
+    /* 5. أيقونات التواصل */
+    .social-links {
+        gap: 20px; /* تقليل المسافات بين الأيقونات */
+    }
+}
+
+
+/* end media query */
