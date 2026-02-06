@@ -47,6 +47,28 @@ nav {
 
 /* end navbar style */
 
+#welcome-msg {
+    width: 30%;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 5px;
+    background-color: rgba(14, 68, 59, 0.796);
+    color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 1rem;
+    margin: 0px auto;
+    transition: 1s;
+}
+
+.dark-mode {
+    background-color: #0e443bcb;
+    color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3); /* رشة شياكة زيادة */
+}
+
 /* start home style */
 .Home  {
     display: flex;
@@ -279,6 +301,7 @@ footer span {
         gap: 20px; /* تقليل المسافات بين الأيقونات */
     }
 }
+
 
 
 /* end media query */
